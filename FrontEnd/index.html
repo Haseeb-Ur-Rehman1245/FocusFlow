@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FocusFlow Pro</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+    <canvas id="stars"></canvas>
+
+    <button id="themeToggle">🌙</button>
+
+<div class="app">
+
+    <h1>FocusFlow</h1>
+
+
+    <div class="timer-card">
+
+    <div class="progress-ring">
+
+        <svg width="220" height="220">
+
+
+        <defs>
+            <linearGradient id="gradient">
+            <stop offset="0%" stop-color="#4ade80"/>
+            <stop offset="100%" stop-color="#22c55e"/>
+            </linearGradient>
+        </defs>
+
+        <circle class="bg" cx="110" cy="110" r="100"></circle>
+        <circle class="progress" cx="110" cy="110" r="100"></circle>
+
+        </svg>
+
+        <div id="time">25:00</div>
+
+    </div>
+
+    <div class="controls">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <p id="mode">Focus Mode</p>
+    <p>Sessions: <span id="sessions">0</span></p>
+
+    </div>
+
+    <div class="task-card">
+    <div class="task-input">
+        <input id="taskInput" placeholder="What are you working on?" />
+        <button onclick="addTask()">+</button>
+    </div>
+
+    <ul id="taskList"></ul>
+    </div>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
